@@ -1,0 +1,15 @@
+.about {
+  border: 5px solid purple;
+  padding: 20px;
+  line-height: 1.5em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    display: flex;
+    flex-direction: row;
+  }
+}
