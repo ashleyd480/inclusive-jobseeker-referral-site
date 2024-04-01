@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Sign In Page</title>
+  </head>
+  <body>
+
+<!-- MAIN WEBSITE NAME  -->
+
+<main>
+    <header class="websiteHeader lightModeBorder"> 
+    <h1 >Refer-all</h1>
+
+    <label class="toggle" id="darkModeBtn">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+  
+    </header>
+
+<!-- SIGN IN SECTION -->
+<!--Broken into the header of Login, followed by loginInfo which asks for username & password, then loginButton (buttons to "remember me" and "sign in"), and lastly loginWith (the buttons to login with Facebook or Google).
+*Input type of password allows the text to be hidden
+*Remember checkbox is set to checked= "checked" so that it's checked by default -->
+
+<section class="logIn lightModeBorder">
+    <h2> Login</h2>
+
+    <div class= "logInInfo"></div>
+
+    <label for="uname"></label>
+    <input type="text" placeholder="Username" name="uname"  class= "mediumFont loginInput" id= "uname" required>
+
+    <label for="psw"></label>
+    <input type="password" placeholder="Password" name="psw"  class= "mediumFont loginInput" id="psw" required> 
+
+    </div>
+
+
+    <div class = "logInButtons" class="mediumFont">
+
+    <label for="remember">
+        <input type="checkbox" checked="checked" name="remember" id="remember"> Remember me
+      </label>
+
+        <button type="button" class="mediumFont" id="signInButton">Sign In</button>
+     
+
+    </div>
+    <div id= "errorMessage">
+     
+    </div>
+
+<!-- These are just static buttons for now. -->
+
+    <div class = "loginWithSocial">
+        <a href="blog.html">
+        <button type="button" class="mediumFont socialBtn signInFacebook" >Sign In with Facebook</button>
+        </a>
+     
+        <a href="blog.html">
+        <button type="button" class="mediumFont socialBtn signInGoogle">Sign In with Google</button>
+         </a>
+
+    </div>
+
+
+</section>
+
+
+</main>
+  </body>
+
+  <script src="js/index.js"></script>
+</html>

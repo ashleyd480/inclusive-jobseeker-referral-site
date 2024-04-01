@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="stylesheet" href="css/blog.css">
+    <title>Main Page</title>
+  </head>
+  <body>
+  
+
+  
+     <!-- HAMBURGER MENU --------->
+     <!-- We add a hamburger menu div for SOC (seperation of concerns) so we can manipulate the hamburger icon seperately. The 3 span class bars are used to create the appearance of a hmburger icon--> 
+
+   <nav class="navbar lightModeBorder">
+        <h1>Refer-all</h1>
+        <div id="welcomeMessage" class="largeFont"></div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Log Out</a>
+            </li>
+         
+    
+            <li class="nav-item">
+                <img id="profilePic" src="../assets/giraffe.avif" alt ="silly giraffe" height="80px">
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+ 
+    <main>
+      <section class="mainPostStuff">
+
+<!-- POST FUNCTIONS  -->
+      <section class="postFunctions">
+       
+        <textarea id="postText" name="post" id="postText" class="mediumFont" placeholder="Write a post"
+     cols="30" rows="10"></textarea>
+
+        <button class="mediumFont" id="postButton">Post</button>
+
+
+    <select id="sortByDate" class="lightModeBorder"  >
+   
+        <option value="" class= "dateOption" disabled selected hidden>Sort by Date</option>
+        <option value="oldest" class= "dateOption">Oldest First</option>
+        <option value="newest" class= "dateOption" >Newest First</option>
+      </select>
+
+        </section>
+
+
+
+
+        <section id="searchBar">
+        <input type="text" placeholder="🔍..." id="searchTerm" class="lightModeBorder">
+        <button class="mediumFont" id="searchButton">Search</button>
+
+      </section>
+
+
+      <hr>
+
+      <section class="postsLog lightModeBorder">
+
+  
+      <div id="postedContentLog" class="postedContentLog"></div>
+
+
+    </section>
+</section>
+  
+
+  <!--- ------------- FETCH API -------------------------- -->
+   <!--Here I've made an aside section that is only visible in desktop-->
+<aside class="fetchAside">
+    <h2> Here we refer-all </h2>
+    <h3>...Everyone deserves a chance </h3>
+    <br>
+    <div class="fetchImages">
+
+    </div>
+    <br>
+   <h3>
+    Write a referral today. </h3>
+    <h3> Refer one.</h3>
+    <h3>  Refer all.
+   </h3>
+  </div>
+</aside>
+
+
+</main>
+
+
+
+  <!--- ------------- FOOTER -------------------------- -->
+
+<footer>
+   <h6> Refer-all </h6>
+    <h6> Made by Ashley </h6>
+</footer>
+</footer>
+  </body>
+  <script src="js/fetch.js"></script>
+  <script src="js/blog.js"></script>
+</html>
+
+
