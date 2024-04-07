@@ -184,7 +184,7 @@ function searchNow() {
     return post.textContent.toLowerCase().includes(searchTerm);
   });
 
-  postedContentLog.innerHTML = "";
+  postedContentLog.innerHTML = ""; // ensuring that postedContent is cleared first so that results can append 
 
   filteredPosts.forEach((post) => postedContentLog.appendChild(post));
 }
