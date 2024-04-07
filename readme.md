@@ -187,17 +187,17 @@ Always keep console.log open to check for reference errors. These type of errors
 
 Our initial code initialized an empty postArray variable. However, this creates two sources of truth. (This is because the DOM is the source of truth, however the the initial postArray was creating another source of truth.)
 
-With a spread operator, this essentially creates a copy of the array of children within the postedContentLog such as comments, buttons, etc (which were appended underneath it). As such, `const posts = [...postedContentLog.children];` is creating that copy of the array and assigning it variable of `posts`. (You can visualize this array with a `console.dir` command and see the tree of children.) 
+With a spread operator, this essentially creates a copy of the array of children within the postedContentLog such as comments, buttons, etc (which were appended underneath it). As such, `const posts = [...postedContentLog.children];` is creating that copy of the array and assigning it variable of `posts`. (You can visualize this array with a `console.dir` command and see the tree of children.)
 
-From there, we can then just apply the sorting and search function. For example, with search, we use the filter method to filter the array to include only ones that inluce the search term, and then that filtered array is iterated through- resulting in the matching posts and their children being appended.
-
+From there, we can then just apply the sorting and search function. For example, with search, we use the filter method to filter the array to include only ones that include the search term, and then that filtered array is iterated through- resulting in the matching posts and their children being appended. Similary, with the "sort by date", the `sort()` method iterates through that array and calls that `sortingFunction` to compare pairs of dates in the array (With oldest to newest: if the result of a - b is negative, it means a should come before b in the sorted array. With newest to oldest, we want to subtract b - a, to ensure the newer datas come first.)
 
 ## Dataset
+
 In the code below, `date` is being added as a dataset attribute to `newPost`. These attributes exist within the `newPost` element's opening tag.
 
 ```
 const postDate = getCurrentDate(); // Get the current date
-newPost.dataset.date = postDate; 
+newPost.dataset.date = postDate;
 ```
-`new Date(a.dataset.date)` and `new Date(b.dataset.date)` are used in the sorting function since datasets return the date as a string, and Data () converts it back to a date value. `new` creates instances of those dates  to allow for comparison. 
 
+`new Date(a.dataset.date)` and `new Date(b.dataset.date)` are used in the sorting function since datasets return the date as a string, and Data () converts it back to a date value. `new` creates instances of those dates to allow for comparison.

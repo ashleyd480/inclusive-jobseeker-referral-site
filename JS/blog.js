@@ -199,6 +199,7 @@ sortByDateDropdown.addEventListener("change", function () {
   sortPosts(selectedOption);
 });
 
+// depending on the selectedOption: assign different sorting functions to the sortingFunction variable.
 console.dir(postedContentLog);
 function sortPosts(selectedOption) {
   let sortingFunction; // creating a local variable, representing how do we want to compare two posts
